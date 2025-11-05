@@ -19,7 +19,7 @@ var app = builder.Build();
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<MyDatabaseContext>();
-    db.Database.Migrate(); // This will apply migrations if any exist
+    db.Database.EnsureCreated(); // This will apply migrations if any exist
 }
 
 // Configure middleware pipeline
