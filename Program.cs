@@ -41,6 +41,6 @@ app.UseAuthorization();
 // Default route points to Todo controller
 app.MapControllerRoute(
     name: "default",
-    pattern: "{controller=Todo}/{action=Index}/{id?}");
+    pattern: "{controller=Todos}/{action=Index}/{id?}");
 
 app.Run();
